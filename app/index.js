@@ -1,8 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import AppNavigator from './config/AppNavigator';
 
-export default () => (
-  <View>
-    <Text>Welcome to Billiards competition platform</Text>
-  </View>
-);
+export default () => <AppNavigator />;

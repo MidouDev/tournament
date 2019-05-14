@@ -1,37 +1,29 @@
 import React from "react";
-import { Text, Button } from "react-native";
-import styled from "styled-components";
-
-const HomeViewContainer = styled.View`
-  background-color: #ffed02;
-  flex: 1;
-`;
-
-const OptionsView = styled.View`
-  flex: 5;
-  align-items: center;
-  justify-content: center;
-`;
-
-const WelcomeView = styled(OptionsView)`
-  flex: 1;
-`;
-
-const WelcomeText= styled.Text`
-  font-size: 20;
-`
+import {HomeViewContainer,WelcomeView,WelcomeText,OptionsView,SpecialButton,ButtonText,Button} from '../styles/HomeScreen';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <HomeViewContainer>
       <WelcomeView>
-        <WelcomeText>Welcome to our tournaments generator</WelcomeText>
+        <WelcomeText>Tournaments Generator</WelcomeText>
       </WelcomeView>
       <OptionsView>
+        <SpecialButton
+          onPress={() => navigation.navigate("Tournament")}
+        >
+          <ButtonText>New Tournament</ButtonText>
+        </SpecialButton>
         <Button
-          title="Go to Description"
           onPress={() => navigation.navigate("Description")}
-        />
+        >
+          <ButtonText>Description</ButtonText>
+        </Button>
+        <Button
+          onPress={() => navigation.navigate("Description")}
+          disabled
+        >
+          <ButtonText>About us</ButtonText>
+        </Button>
       </OptionsView>
     </HomeViewContainer>
   );

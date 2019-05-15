@@ -15,14 +15,14 @@ const HomeScreen = ({ navigation }) => {
         </SpecialButton>
         <Button
           onPress={() => navigation.navigate("Description")}
+          disabled
         >
-          <ButtonText>Description</ButtonText>
+          <ButtonText>Load</ButtonText>
         </Button>
         <Button
           onPress={() => navigation.navigate("Description")}
-          disabled
         >
-          <ButtonText>About us</ButtonText>
+          <ButtonText>Description</ButtonText>
         </Button>
       </OptionsView>
     </HomeViewContainer>

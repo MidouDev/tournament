@@ -1,17 +1,23 @@
 import React from "react";
-import { Text } from "react-native";
-import styled from "styled-components";
-
-const StyledView = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffed02;
-`;
+import {
+  StyledView,
+  TitleText,
+  OptionsView,
+  Button,
+  ButtonText
+} from "../styles/TournamentScreen";
 
 const TournamentScreen = ({ navigation }) => (
   <StyledView>
-    <Text>Tournament Screen</Text>
+    <TitleText>Choose Tournament Mode</TitleText>
+    <OptionsView>
+      <Button primary onPress={() => navigation.navigate("Settings",{ mode : 'single'})}>
+        <ButtonText>1 vs 1</ButtonText>
+      </Button>
+      <Button onPress={() => navigation.navigate("Settings",{ mode : 'multi'})}>
+        <ButtonText>2 vs 2</ButtonText>
+      </Button>
+    </OptionsView>
   </StyledView>
 );
 

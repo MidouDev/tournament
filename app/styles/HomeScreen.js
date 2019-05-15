@@ -28,7 +28,7 @@ export const Button = styled.TouchableOpacity`
   alignItems: center;
   backgroundColor: ${props => props.disabled ? 'grey' : '#a50044'};
   padding: 10px;
-  width: 200;
+  width: 250;
   border-radius: 5;
   margin: 5px;
   opacity: ${props => props.disabled ? 0.6 : 1};
@@ -38,7 +38,7 @@ export const ButtonText = styled.Text`
   font-size: 25;
   font-weight: bold;
   color: #edbb00;
-  text-align:center;
+  text-align: center;
 `;
 
 export const SpecialButton = styled(Button)`
